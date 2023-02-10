@@ -65,7 +65,7 @@ jobs:
           # TODO: Install, build, deploy in both apps
           command: |
             echo "Install, build, deploy in both apps"
-            npm run deploy
+            npm run frontend:deploy
 
 workflows:
   udagram:
@@ -75,7 +75,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
           type: approval
           requires:
             - build
