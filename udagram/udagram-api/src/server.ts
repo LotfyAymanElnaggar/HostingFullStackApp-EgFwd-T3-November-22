@@ -51,7 +51,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
   // Root URI call
   app.get("/", async (req, res) => {
-    res.send("/api/v0/");
+    res.send("Welcome 👋 World 🌍 >> /api/v0/");
   });
 
   // Start the Server
