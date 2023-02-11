@@ -17,7 +17,7 @@ jobs:
           node-version: '14.15'         
       - checkout
       # Use root level package.json to install dependencies in the frontend app
-      - run:
+      - run: #Install Front-End Dependencies
           name: Install Front-End Dependencies
           command: |
             echo "NODE --version" 
@@ -62,15 +62,15 @@ jobs:
       - checkout
       # TODO: Install, build, deploy in both apps
       - run:
-          name: Deploy Frontend
-          command: |
-            echo "Install, build, deploy in both apps"
-            npm run frontend:deploy
-      - run:
           name: Deploy API
           command: |
             echo "Install, build, deploy in both apps"
             npm run api:deploy
+      - run:
+          name: Deploy Frontend
+          command: |
+            echo "Install, build, deploy in both apps"
+            npm run frontend:deploy
 
 workflows:
   udagram:
