@@ -12,11 +12,12 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 (async () => {
   dotenv.config();
   
+  console.error("Log ___________");
   try {
     await sequelize.authenticate();
     console.log("Connection has been established successfully.");
   } catch (error) {
-    console.error("Unable to connect to the database:", error);
+    console.error("Unable to connect to the database:");
   }
 
   await sequelize.addModels(V0_FEED_MODELS);
