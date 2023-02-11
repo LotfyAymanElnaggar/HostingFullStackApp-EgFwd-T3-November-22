@@ -1,0 +1,3 @@
+# Infrastructure description
+
+At first, the user requests the site, and then the user interface (which is served on the S3 bucket) appears to him, which he can interact with by requesting data, and then UI contacts the API (which is served on Elastic Beanstalk), which in turn connects to the database (which served on RDS as PostgreSQL) to request the information included in the request and then returns it to the user.
